@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\Salon;
 
-use App\Models\Employer\Leave\EmployerLeave;
+use App\Http\Controllers\Controller;
+use App\Models\Salon\SalonOpenEndTime;
 use Illuminate\Http\Request;
 
-class EmployerLeaveController extends Controller
+class SalonOpenEndTimeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class EmployerLeaveController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EmployerLeave $employerLeave)
+    public function show(SalonOpenEndTime $spaTypeOpenEndTime)
     {
         //
     }
@@ -42,7 +43,7 @@ class EmployerLeaveController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(EmployerLeave $employerLeave)
+    public function edit(SalonOpenEndTime $spaTypeOpenEndTime)
     {
         //
     }
@@ -50,7 +51,7 @@ class EmployerLeaveController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, EmployerLeave $employerLeave)
+    public function update(Request $request, SalonOpenEndTime $spaTypeOpenEndTime)
     {
         //
     }
@@ -58,7 +59,7 @@ class EmployerLeaveController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EmployerLeave $employerLeave)
+    public function destroy(SalonOpenEndTime $spaTypeOpenEndTime)
     {
         //
     }
