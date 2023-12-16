@@ -1,19 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\Setting;
 
+use App\Http\Controllers\Controller;
 use App\Models\Setting\Setting;
+use App\Repositories\Setting\Interface\SettingRepositoryInterface;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
+    private $settingRepository;
+
+    public function __construct(SettingRepositoryInterface $settingRepository)
+    {
+        $this->settingRepository = $settingRepository;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return $this->settingRepository->index();
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -26,9 +37,13 @@ class SettingController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function changeSetting(Request $request)
     {
-        //
+        $request->validate([
+            'id' => 'required',
+            'vat'=>'required'
+        ]);
+        return $this->settingRepository->changeSetting($request);
     }
 
     /**

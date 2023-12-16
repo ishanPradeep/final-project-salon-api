@@ -1,18 +1,27 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\Employer\WorkingDay;
 
+use App\Http\Controllers\Controller;
 use App\Models\Employer\WorkingDay\EmployerWorkingDay;
+use App\Repositories\Employer\WorkingDay\Interface\EmployerWorkingDayRepositoryInterface;
 use Illuminate\Http\Request;
 
 class EmployerWorkingDayController extends Controller
 {
+    private $employerWorkingDayRepository;
+
+    public function __construct(EmployerWorkingDayRepositoryInterface $employerWorkingDayRepository)
+    {
+        $this->employerWorkingDayRepository = $employerWorkingDayRepository;
+    }
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        return $this->employerWorkingDayRepository->all($request);
     }
 
     /**
@@ -24,11 +33,26 @@ class EmployerWorkingDayController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     */
+//    public function findById($day_id)
+//    {
+//        return $this->employerWorkingDayRepository->findById($day_id);
+//    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'day_id'=>'required',
+            'employer_id'=>'required',
+            'from_time'=>'required',
+            'to_time'=>'required'
+
+        ]);
+        return $this->employerWorkingDayRepository->store($request);
     }
 
     /**

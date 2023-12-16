@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\Salon;
 
-use App\Models\Salon\PlaceOffer\PlaceOffer;
+use App\Http\Controllers\Controller;
+use App\Models\Salon\SalonBannerImage;
 use Illuminate\Http\Request;
 
-class PlaceOfferController extends Controller
+class SalonBannerImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class PlaceOfferController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PlaceOffer $placeOffer)
+    public function show(SalonBannerImage $salonBannerImage)
     {
         //
     }
@@ -42,7 +43,7 @@ class PlaceOfferController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PlaceOffer $placeOffer)
+    public function edit(SalonBannerImage $salonBannerImage)
     {
         //
     }
@@ -50,7 +51,7 @@ class PlaceOfferController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PlaceOffer $placeOffer)
+    public function update(Request $request, SalonBannerImage $salonBannerImage)
     {
         //
     }
@@ -58,7 +59,7 @@ class PlaceOfferController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PlaceOffer $placeOffer)
+    public function destroy(SalonBannerImage $salonBannerImage)
     {
         //
     }

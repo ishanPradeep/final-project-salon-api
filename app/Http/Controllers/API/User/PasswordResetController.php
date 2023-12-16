@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\User;
 
-use App\Models\Salon\SalonService\BannerImage\SalonServiceBannerImage;
+use App\Http\Controllers\Controller;
+use App\Models\User\PasswordReset;
 use Illuminate\Http\Request;
 
-class SalonServiceBannerImageController extends Controller
+class PasswordResetController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class SalonServiceBannerImageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SalonServiceBannerImage $salonServiceBannerImage)
+    public function show(PasswordReset $passwordReset)
     {
         //
     }
@@ -42,7 +43,7 @@ class SalonServiceBannerImageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SalonServiceBannerImage $salonServiceBannerImage)
+    public function edit(PasswordReset $passwordReset)
     {
         //
     }
@@ -50,7 +51,7 @@ class SalonServiceBannerImageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SalonServiceBannerImage $salonServiceBannerImage)
+    public function update(Request $request, PasswordReset $passwordReset)
     {
         //
     }
@@ -58,7 +59,7 @@ class SalonServiceBannerImageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SalonServiceBannerImage $salonServiceBannerImage)
+    public function destroy(PasswordReset $passwordReset)
     {
         //
     }

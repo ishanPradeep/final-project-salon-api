@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API\User;
 
-use App\Models\Salon\SalonType\SalonType;
+use App\Http\Controllers\Controller;
+use App\Models\UserLevel;
 use Illuminate\Http\Request;
 
-class SalonTypeController extends Controller
+class UserLevelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class SalonTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SalonType $salonType)
+    public function show(UserLevel $userLevel)
     {
         //
     }
@@ -42,7 +43,7 @@ class SalonTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SalonType $salonType)
+    public function edit(UserLevel $userLevel)
     {
         //
     }
@@ -50,7 +51,7 @@ class SalonTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SalonType $salonType)
+    public function update(Request $request, UserLevel $userLevel)
     {
         //
     }
@@ -58,7 +59,7 @@ class SalonTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SalonType $salonType)
+    public function destroy(UserLevel $userLevel)
     {
         //
     }
