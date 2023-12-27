@@ -2,10 +2,21 @@
 
 namespace App\Models\Salon\SalonType;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Salon\Service\Service;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class SalonType extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'title',
+        'subtitle',
+        'icon'
+    ];
+    public function services()
+    {
+        return $this->hasMany('App\Models\Salon\Service\Service');
+    }
+
 }
