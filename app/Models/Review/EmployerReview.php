@@ -7,5 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class EmployerReview extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'user_id',
+        'employer_id',
+        'review',
+        'rating'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User\User');
+    }
+    public function employer()
+    {
+        return $this->belongsTo('App\Models\Employer\Employer');
+    }
 }

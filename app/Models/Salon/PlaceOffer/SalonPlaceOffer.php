@@ -2,10 +2,14 @@
 
 namespace App\Models\Salon\PlaceOffer;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class SalonPlaceOffer extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'salon_id',
+        'place_offer_id'
+    ];
+
 }

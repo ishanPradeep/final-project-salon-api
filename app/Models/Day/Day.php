@@ -2,10 +2,18 @@
 
 namespace App\Models\Day;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Day extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'name',
+    ];
+
+    public function employer_working_days() {
+        return $this->hasMany('App\Models\Employer\WorkingDay\EmployerWorkingDay');
+    }
+
 }

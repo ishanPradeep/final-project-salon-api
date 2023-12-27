@@ -2,10 +2,17 @@
 
 namespace App\Models\Salon\SalonService\BannerImage;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class SalonServiceBannerImage extends Model
 {
-    use HasFactory;
-}
+    protected $fillable = [
+        'id',
+        'path',
+        'salon_service_id'
+    ];
+
+    public function salon_service()
+    {
+        return $this->belongsTo('App\Models\Salon\SalonService\SalonService');
+    }}
